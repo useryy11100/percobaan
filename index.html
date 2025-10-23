@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Profil Digital - Yoga Fathullah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-family:'Poppins',sans-serif;
+            background:linear-gradient(135deg,#FFF5B7,#A8E6CF);
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .kartu-profil{
+            width:340px;
+            padding:30px 25px;
+            background:rgba(255,255,255,0.75);
+            border-radius:16px;
+            box-shadow:0 8px 32px rgba(31,38,135,0.12);
+            backdrop-filter:blur(6px);
+            text-align:center;
+            color:#333;
+        }
+        .kartu-profil img{
+            width:120px;
+            height:120px;
+            object-fit:cover;
+            border-radius:50%;
+            border:3px solid #007BFF;
+            margin-bottom:15px;
+            transition:transform .3s ease;
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .kartu-profil img.hidden {
+            display:none;
+        }
+        .kartu-profil h1{font-size:24px;font-weight:600;margin:10px 0 5px;}
+        .kartu-profil p{font-size:15px;color:#555;margin-bottom:15px;}
+        .kartu-profil a{display:inline-block;color:#007BFF;text-decoration:none;margin-bottom:20px;font-weight:500;}
+        button{
+            background:#007BFF;color:#fff;border:none;padding:10px 22px;border-radius:8px;font-size:15px;cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="kartu-profil">
+        <!--
+            Pastikan file "download.png" berada di folder yang sama dengan index.html.
+            Jika masih gagal, <img> akan fallback ke placeholder via onerror.
+        -->
+        <img id="fotoProfil"
+             src="download.png"
+             alt="Foto Profil Yoga Fathullah"
+             onerror="handleImageError(this)">
+        <h1>Yoga Fathullah</h1>
+        <p>Siswa dari SMKN Klakah</p>
+        <a href="https://uprint.id/blog/foto-keren-dalam-fotografi-seni-dan-inspirasi-dalam-foto-foto-luar-biasa/" target="_blank" rel="noopener">Kunjungi</a><br>
+        <button id="sapaButton">Sapa Saya!</button>
+    </div>
+
+    <script>
+        // Tombol sapa
+        document.getElementById('sapaButton').addEventListener('click', function () {
+            alert('Halo! Terima kasih sudah berkunjung 😊');
+        });
+
+        // Jika gambar gagal dimuat, beralih ke placeholder online dan log error
+        function handleImageError(imgEl) {
+            console.error('Gagal memuat gambar:', imgEl.src);
+            // Fallback: gambar placeholder (online)
+            imgEl.src = 'https://via.placeholder.com/240?text=No+Image';
+            // Jika ingin menyembunyikan gambar yang rusak, uncomment baris berikut:
+            // imgEl.classList.add('hidden');
+        }
+
+        // DEBUG: tampilkan info path (bisa dibuka di console)
+        console.log('Img src saat ini:', document.getElementById('fotoProfil').src);
+    </script>
+</body>
+</html>
