@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Profil Digital - DISCORD</title>
+    <title>COMUNITY - DISCORD</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body{
@@ -51,27 +51,21 @@
 </head>
 <body>
     <div class="kartu-profil">
-        <!--
-            Pastikan file "download.png" berada di folder yang sama dengan index.html.
-            Jika masih gagal, <img> akan fallback ke placeholder via onerror.
-        -->
         <img id="fotoProfil"
              src="Elon_Musk.jpg"
              alt="Foto LOGO DISCORD"
              onerror="handleImageError(this)">
         <h1>SMK ONLINE</h1>
-        <p>DISCORD COMUNITY SMKN Klakah</p>
+        <p>DISCORD COMUNITY SMKN KLAKAH</p>
         <a href="https://discord.gg/PZpAdQ47">Kunjungi</a><br>
         <button id="sapaButton">Sapa Saya!</button>
     </div>
 
     <script>
-        // Tombol sapa
         document.getElementById('sapaButton').addEventListener('click', function () {
             alert('Ayo gabung ke comunitas kami 😊');
         });
 
-        // Jika gambar gagal dimuat, beralih ke placeholder online dan log error
         function handleImageError(imgEl) {
             console.error('Gagal memuat gambar:', imgEl.src);
             // Fallback: gambar placeholder (online)
